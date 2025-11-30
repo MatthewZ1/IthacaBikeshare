@@ -237,7 +237,7 @@
 
 
     // D3 code
-    d3.csv("edu-trips-ithaca-nov-12-24 - edu-trips-ithaca-nov-12-24.csv").then(data => {
+    d3.csv("cornelltrips-oct-06-25.csv").then(data => {
       if (!data || data.length === 0) {
         console.error("CSV data is empty or not loaded correctly.");
         return;
@@ -246,6 +246,9 @@
       data.forEach(d => {
         d.duration = +d.duration;
         d.trip_start_time = new Date(d.trip_start_time);
+        if (isNaN(d.trip_start_time)) {
+          console.error("Invalid date:", d.trip_start_time);
+        }
       });
 
       // Chart 1: Trips by Hour
