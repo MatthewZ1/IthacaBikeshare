@@ -199,7 +199,9 @@
   <div id="chart4" class="chart-container"></div>
   <div class="chart-text">
     <h2>Cornell Users: Trips by Hour</h2>
-    <p>Description</p>
+    <p>The usage of Ithaca Bikeshare for Cornell users shows a clear pattern. The activity is low at night, starts to rise in the morning around 8 AM and peaks in the 
+      afternoon, around 2 PM. After 5 PM, it starts to decline. This shows that most Cornell students use Ithaca Bikeshare for midday travel, likely to commute to classes. 
+</p>
   </div>
 </div>
 
@@ -284,7 +286,13 @@
         })
         .on("mouseout", hideTooltip);
       svgChart4.append("g").attr("transform", `translate(0,${height - margin.top - margin.bottom})`)
-        .call(d3.axisBottom(xCornell).tickFormat(d => `${d}:00`));
+        .call(d3.axisBottom(xCornell).tickFormat(d => `${d}:00`))
+        .selectAll("text")
+        .attr("transform", "rotate(-40)")
+        .style("font-size", "10px")
+        .attr("dy", "1.0em")
+        .attr("dx", "-2.0em");
+;
       svgChart4.append("g").call(d3.axisLeft(yCornell));
 
       // Chart 5: Cornell vs Other Email Affiliation
@@ -310,7 +318,8 @@
         })
         .on("mouseout", hideTooltip);
       pieSvgEmail.selectAll("text").data(pieEmail(pieDataEmail)).enter().append("text")
-        .attr("transform", d => `translate(${arcEmail.centroid(d)})`).attr("text-anchor", "middle").attr("fill", "#fff").text(d => d.data.key);
+        .attr("transform", d => `translate(${arcEmail.centroid(d)})`).attr("text-anchor", "middle").attr("fill", "#fff").text(d => d.data.key).attr("font-size", "12.25px");
+;
 
       const parseTime = d3.timeParse("%Y-%m-%d %H:%M:%S");
 
