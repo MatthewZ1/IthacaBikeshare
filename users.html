@@ -210,7 +210,8 @@
   <div id="chart5" class="chart-container"></div>
   <div class="chart-text">
     <h2>Cornell vs. Other Email Affiliation</h2>
-    <p>Description</p>
+    <p>Over 60% of all Ithaca Bikeshare users use Cornell affiliated emails. Considering Cornell users who do not use 
+      Cornell emails for Ithaca Bikeshare, we can tell that Cornell users are take up a significant portion of all Ithacka Bikeshare users. </p>
   </div>
 </div>
 
@@ -313,7 +314,7 @@
         .on("mouseover", (event, d) => {
           const label = d.data.key;
           const count = d.data.value;
-          const percent = ((count / d3.sum(pieData.map(d => d.value))) * 100).toFixed(1);
+          const percent = ((count / d3.sum(pieDataEmail.map(d => d.value))) * 100).toFixed(1);
           showTooltip(event, `${label}<br>${count} trips<br>${percent}%`);
         })
         .on("mouseout", hideTooltip);
