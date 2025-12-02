@@ -27,12 +27,12 @@
       max-width: 450px;
       padding-top: 10px
     }
-    
+
     .chart-text h2 {
       margin-top: 0;
       font-size: 1.4rem;
       color: #005f73;
-      
+
     }
 
     .chart-text p {
@@ -69,114 +69,117 @@
       background: var(--bg);
       line-height: 1.5;
       text-align: center;
-      background-color: #e3f4f8;;
+      background-color: #e3f4f8;
+      ;
       letter-spacing: .8px;
     }
 
     select {
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
     }
-    
+
     /* Header */
-  header {
-    background: #fff;
-    margin-top: 12px;
-    border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, .08);
-    overflow: hidden;
-  }
+    header {
+      background: #fff;
+      margin-top: 12px;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, .08);
+      overflow: hidden;
+    }
 
-  .brand-row {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-    padding: 20px 28px;
-    border-bottom: 1px solid #eef1f4;
-  }
+    .brand-row {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      padding: 20px 28px;
+      border-bottom: 1px solid #eef1f4;
+    }
 
 
-  .logo-mark {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    min-width: 220px;
-  }
+    .logo-mark {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 220px;
+    }
 
-  .logo-mark img {
-    max-height: 80px; /* Reduce logo size */
-    width: auto;
-  }
+    .logo-mark img {
+      max-height: 80px;
+      /* Reduce logo size */
+      width: auto;
+    }
 
-  .logo-text {
-    font-size: 14px;
-    color: #6b7485; /* muted color */
-  }
+    .logo-text {
+      font-size: 14px;
+      color: #6b7485;
+      /* muted color */
+    }
 
-  .logo-text strong {
-    display: block;
-    font-size: 18px;
-    letter-spacing: .5px;
-    color: #2e2e2e;
-  }
+    .logo-text strong {
+      display: block;
+      font-size: 18px;
+      letter-spacing: .5px;
+      color: #2e2e2e;
+    }
 
-  .dashboard-title {
-    font-size: 28px;
-  }
+    .dashboard-title {
+      font-size: 28px;
+    }
 
-  h1 {
-    margin: 0;
-    font-size: 34px;
-    letter-spacing: .8px;
-    text-align: left;
-    padding-top: 30px;
-    padding-left: 140px;
-  }
+    h1 {
+      margin: 0;
+      font-size: 34px;
+      letter-spacing: .8px;
+      text-align: left;
+      padding-top: 30px;
+      padding-left: 140px;
+    }
 
-  /* Navigation */
-  nav {
-    background: #2c4858; /* deep teal */
-    color: #fff;
-    display: flex;
-    gap: 28px;
-    padding: 14px 28px;
-    font-weight: 700;
-    letter-spacing: .3px;
-    flex-wrap: wrap;
-  }
+    /* Navigation */
+    nav {
+      background: #2c4858;
+      /* deep teal */
+      color: #fff;
+      display: flex;
+      gap: 28px;
+      padding: 14px 28px;
+      font-weight: 700;
+      letter-spacing: .3px;
+      flex-wrap: wrap;
+    }
 
-  nav a {
-    color: #fff;
-    text-decoration: none;
-    opacity: .95;
-  }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      opacity: .95;
+    }
 
-  nav a:hover {
-    opacity: 1;
-    text-decoration: underline;
-  }
-
+    nav a:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
   </style>
 </head>
 
 <body>
   <header>
-  <div class="brand-row">
-    <div class="logo-mark">
-      <img src="images/logo.png" alt="Docked Ithaca Bikeshare e-bikes logo" />
-      <div class="logo-text">
-        <strong>ITHACA BIKESHARE</strong>
-        <span>In collaboration with<br />Engineers for a Sustainable World</span>
+    <div class="brand-row">
+      <div class="logo-mark">
+        <img src="images/logo.png" alt="Docked Ithaca Bikeshare e-bikes logo" />
+        <div class="logo-text">
+          <strong>ITHACA BIKESHARE</strong>
+          <span>In collaboration with<br />Engineers for a Sustainable World</span>
+        </div>
       </div>
+      <h1 class="dashboard-title">Micromobility Insights Dashboard</h1>
     </div>
-    <h1 class="dashboard-title">Micromobility Insights Dashboard</h1>
-  </div>
 
-  <nav>
-    <a href="index.html">About</a>
-    <a href="trips.html">Trips</a>
-    <a href="users.html">Users</a>
-  </nav>
-</header>
+    <nav>
+      <a href="index.html">About</a>
+      <a href="trips.html">Trips</a>
+      <a href="users.html">Users</a>
+    </nav>
+  </header>
 
   <h1>TRIP ANALYTICS</h1>
 
@@ -193,59 +196,77 @@
   -->
 
   <!-- Chart Containers -->
-<!-- Chart 1 -->
-<div class="chart-section">
-  <div id="chart1" class="chart-container"></div>
-  <div class="chart-text">
-    <h2>Trips by Hour</h2>
-    <p>Description</p>
+  <!-- Chart 1 -->
+  <div class="chart-section">
+    <div id="chart1" class="chart-container"></div>
+    <div class="chart-text">
+      <h2>Trips by Hour</h2>
+      <p>Description</p>
+    </div>
   </div>
-</div>
 
-<!-- Chart 2 -->
-<div class="chart-section">
-  <div id="chart2" class="chart-container"></div>
-  <div class="chart-text">
-    <h2>Trip Duration Histogram</h2>
-    <p>Description</p>
+  <!-- Chart 9 -->
+  <div class="chart-section">
+    <div id="chart9" class="chart-container" style="height: 500px; width: 100%;"></div>
+    <div class="chart-text">
+      <h2>Trips by Start Time (New Dataset)</h2>
+      <p>Description</p>
+    </div>
   </div>
-</div>
 
-<!-- Chart 3 -->
-<div class="chart-section">
-  <div id="chart3" class="chart-container"></div>
-  <div class="chart-text">
-    <h2>Trip Start and End Distribution</h2>
-    <p>Description</p>
+  <!-- Chart 10 -->
+  <div class="chart-section">
+    <div id="chart10" class="chart-container" style="height: 500px; width: 100%;"></div>
+    <div class="chart-text">
+      <h2>Trips by End Time (New Dataset)</h2>
+      <p>Description</p>
+    </div>
   </div>
-</div>
 
-<!-- Chart 6 -->
-<div class="chart-section">
-  <div id="chart6" class="chart-container"></div>
-  <div class="chart-text">
-    <h2>Most Common Routes</h2>
-    <p>Description</p>
+  <!-- Chart 2 -->
+  <div class="chart-section">
+    <div id="chart2" class="chart-container"></div>
+    <div class="chart-text">
+      <h2>Trip Duration Histogram</h2>
+      <p>Description</p>
+    </div>
   </div>
-</div>
 
-<!-- Chart 7 -->
-<div class="chart-section">
-  <div id="chart7" class="chart-container"  style="height: 500px; width: 100%;"></div>
-  <div class="chart-text">
-    <h2>Heat Map for Start Zone</h2>
-    <p>Description</p>
+  <!-- Chart 3 -->
+  <div class="chart-section">
+    <div id="chart3" class="chart-container"></div>
+    <div class="chart-text">
+      <h2>Trip Start and End Distribution</h2>
+      <p>Description</p>
+    </div>
   </div>
-</div>
 
-<!-- Chart 8 -->
-<div class="chart-section">
-  <div id="chart8" class="chart-container"  style="height: 500px; width: 100%;"></div>
-  <div class="chart-text">
-    <h2>Heat Map for End Zone</h2>
-    <p>Description</p>
+  <!-- Chart 6 -->
+  <div class="chart-section">
+    <div id="chart6" class="chart-container"></div>
+    <div class="chart-text">
+      <h2>Most Common Routes</h2>
+      <p>Description</p>
+    </div>
   </div>
-</div>
+
+  <!-- Chart 7 -->
+  <div class="chart-section">
+    <div id="chart7" class="chart-container" style="height: 500px; width: 100%;"></div>
+    <div class="chart-text">
+      <h2>Heat Map for Start Zone</h2>
+      <p>Description</p>
+    </div>
+  </div>
+
+  <!-- Chart 8 -->
+  <div class="chart-section">
+    <div id="chart8" class="chart-container" style="height: 500px; width: 100%;"></div>
+    <div class="chart-text">
+      <h2>Heat Map for End Zone</h2>
+      <p>Description</p>
+    </div>
+  </div>
 
 
 
@@ -447,7 +468,7 @@
       let routeCounts = {};
 
       // Loop over each trip in the data
-      data.forEach(function(trip) {
+      data.forEach(function (trip) {
         // Construct route, ex: "Cornell University -> CollegeTown"
         let route = trip.start_zone + " -> " + trip.end_zone;
         // If the route was already added, add 1. Otherwise, set it as 1 
@@ -530,7 +551,7 @@
 
       data.forEach(d => {
         const start = d.start_zone;
-        if (start === "Cornell University" ) bubblePointsData["Cornell University"]++;
+        if (start === "Cornell University") bubblePointsData["Cornell University"]++;
         else if (start === "City Of Ithaca") bubblePointsData["City Of Ithaca"]++;
         else if (start === "CollegeTown") bubblePointsData["CollegeTown"]++;
         else if (start === "Town of Ithaca") bubblePointsData["Town of Ithaca"]++;
@@ -543,20 +564,20 @@
 
       // Demo markers
       const markers = [
-        { long: -76.4753, lat: 42.4543, size: bubblePointsData["Cornell University"]}, //Cornell University
-        { long: -76.5019, lat: 42.4430, size: bubblePointsData["City Of Ithaca"]}, //City Of Ithaca
-        { long: -76.5035, lat: 42.4444, size: bubblePointsData["CollegeTown"]}, //CollegeTown
-        { long: -76.5030, lat: 42.4405, size: bubblePointsData["Town of Ithaca"]}, //Town of Ithaca
-        { long: -76.4920, lat: 42.4500, size: bubblePointsData["East Hill"]}, //East Hill
-        { long: -76.4950, lat: 42.4265, size: bubblePointsData["Ithaca College"]}, //Ithaca College
-        { long: -76.5150, lat: 42.4300, size: bubblePointsData["South Hill"]}, //South Hill
-        { long: -76.5350, lat: 42.4500, size: bubblePointsData["West Hill"]}, //West Hill
-        {long: -76.45900, lat: 42.4910, size: bubblePointsData["ITH - Airport"]} //ITH - Airport
+        { long: -76.4753, lat: 42.4543, size: bubblePointsData["Cornell University"] }, //Cornell University
+        { long: -76.5019, lat: 42.4430, size: bubblePointsData["City Of Ithaca"] }, //City Of Ithaca
+        { long: -76.5035, lat: 42.4444, size: bubblePointsData["CollegeTown"] }, //CollegeTown
+        { long: -76.5030, lat: 42.4405, size: bubblePointsData["Town of Ithaca"] }, //Town of Ithaca
+        { long: -76.4920, lat: 42.4500, size: bubblePointsData["East Hill"] }, //East Hill
+        { long: -76.4950, lat: 42.4265, size: bubblePointsData["Ithaca College"] }, //Ithaca College
+        { long: -76.5150, lat: 42.4300, size: bubblePointsData["South Hill"] }, //South Hill
+        { long: -76.5350, lat: 42.4500, size: bubblePointsData["West Hill"] }, //West Hill
+        { long: -76.45900, lat: 42.4910, size: bubblePointsData["ITH - Airport"] } //ITH - Airport
       ];
 
       // Add a tile to the map = a background. Comes from OpenStreetmap
       L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       }).addTo(map);
 
 
@@ -630,7 +651,7 @@
 
       data.forEach(d => {
         const end = d.end_zone;
-        if (end === "Cornell University" ) bubblePointsDataEndZone["Cornell University"]++;
+        if (end === "Cornell University") bubblePointsDataEndZone["Cornell University"]++;
         else if (end === "City Of Ithaca") bubblePointsDataEndZone["City Of Ithaca"]++;
         else if (end === "CollegeTown") bubblePointsDataEndZone["CollegeTown"]++;
         else if (end === "Town of Ithaca") bubblePointsDataEndZone["Town of Ithaca"]++;
@@ -643,20 +664,20 @@
 
       // Demo markers
       const markersEndZone = [
-        { long: -76.4753, lat: 42.4543, size: bubblePointsDataEndZone["Cornell University"]}, //Cornell University
-        { long: -76.5019, lat: 42.4430, size: bubblePointsDataEndZone["City Of Ithaca"]}, //City Of Ithaca
-        { long: -76.5035, lat: 42.4444, size: bubblePointsDataEndZone["CollegeTown"]}, //CollegeTown
-        { long: -76.5030, lat: 42.4405, size: bubblePointsDataEndZone["Town of Ithaca"]}, //Town of Ithaca
-        { long: -76.4920, lat: 42.4500, size: bubblePointsDataEndZone["East Hill"]}, //East Hill
-        { long: -76.4950, lat: 42.4265, size: bubblePointsDataEndZone["Ithaca College"]}, //Ithaca College
-        { long: -76.5150, lat: 42.4300, size: bubblePointsDataEndZone["South Hill"]}, //South Hill
-        { long: -76.5350, lat: 42.4500, size: bubblePointsDataEndZone["West Hill"]}, //West Hill
-        {long: -76.45900, lat: 42.4910, size: bubblePointsDataEndZone["ITH - Airport"]} //ITH - Airport
+        { long: -76.4753, lat: 42.4543, size: bubblePointsDataEndZone["Cornell University"] }, //Cornell University
+        { long: -76.5019, lat: 42.4430, size: bubblePointsDataEndZone["City Of Ithaca"] }, //City Of Ithaca
+        { long: -76.5035, lat: 42.4444, size: bubblePointsDataEndZone["CollegeTown"] }, //CollegeTown
+        { long: -76.5030, lat: 42.4405, size: bubblePointsDataEndZone["Town of Ithaca"] }, //Town of Ithaca
+        { long: -76.4920, lat: 42.4500, size: bubblePointsDataEndZone["East Hill"] }, //East Hill
+        { long: -76.4950, lat: 42.4265, size: bubblePointsDataEndZone["Ithaca College"] }, //Ithaca College
+        { long: -76.5150, lat: 42.4300, size: bubblePointsDataEndZone["South Hill"] }, //South Hill
+        { long: -76.5350, lat: 42.4500, size: bubblePointsDataEndZone["West Hill"] }, //West Hill
+        { long: -76.45900, lat: 42.4910, size: bubblePointsDataEndZone["ITH - Airport"] } //ITH - Airport
       ];
 
       // Add a tile to the map = a background. Comes from OpenStreetmap
       L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       }).addTo(map2);
 
 
@@ -729,8 +750,8 @@
       const margin5 = { top: 40, right: 150, bottom: 50, left: 60 },
         width5 = 800 - margin5.left - margin5.right,
         height5 = 400 - margin5.top - margin5.bottom;
-      
-        
+
+
 
       // Append the SVG for the chart
       const svg5 = d3.select("#chart").append("svg")
@@ -844,6 +865,93 @@
     }).catch(error => {
       console.error("Error loading CSV data:", error);
     });
+
+    d3.csv("cornelltrips-oct-06-25.csv").then(data => {
+      if (!data || data.length === 0) {
+        console.error("CSV data is empty or not loaded correctly.");
+        return;
+      }
+
+      // Ensure start and end times are Date objects
+      data.forEach(d => {
+        d.duration = +d.duration;
+        d.trip_start_time = new Date(d.trip_start_time);
+        d.trip_end_time = new Date(d.trip_end_time); // <-- added
+      });
+
+      // Shared chart dimensions
+      const width = 600, height = 400, margin = { top: 40, right: 20, bottom: 40, left: 50 };
+
+      // Chart 9: Trips by Start Time
+      const tripsByHour = d3.rollup(data, v => v.length, d => d.trip_start_time.getHours());
+      const tripArray = Array.from(tripsByHour, ([hour, count]) => ({ hour: +hour, count })).sort((a, b) => a.hour - b.hour);
+
+      const x9 = d3.scaleBand().domain(tripArray.map(d => d.hour)).range([margin.left, width - margin.right]).padding(0.1);
+      const y9 = d3.scaleLinear().domain([0, d3.max(tripArray, d => d.count)]).nice().range([height - margin.bottom, margin.top]);
+
+      const svgChart9 = d3.select("#chart9").append("svg").attr("width", width).attr("height", height);
+      svgChart9.append("g")
+        .selectAll("rect")
+        .data(tripArray)
+        .enter().append("rect")
+        .attr("x", d => x9(d.hour))
+        .attr("y", d => y9(d.count))
+        .attr("height", d => y9(0) - y9(d.count))
+        .attr("width", x9.bandwidth())
+        .attr("fill", "steelblue")
+        .on("mouseover", (event, d) => {
+          showTooltip(event, `Hour: ${d.hour}:00<br>Trips: ${d.count}`);
+        })
+        .on("mouseout", hideTooltip);
+
+      svgChart9.append("g")
+        .attr("transform", `translate(0,${height - margin.bottom})`)
+        .call(d3.axisBottom(x9).tickFormat(d => d + ":00"))
+        .selectAll("text")
+        .attr("transform", "rotate(-45)")
+        .style("text-anchor", "end");
+
+      svgChart9.append("g")
+        .attr("transform", `translate(${margin.left},0)`)
+        .call(d3.axisLeft(y9));
+
+      // Chart 10: Trips by End Time
+      const tripsByHourEnd = d3.rollup(data, v => v.length, d => d.trip_end_time.getHours());
+      const tripArrayEnd = Array.from(tripsByHourEnd, ([hour, count]) => ({ hour: +hour, count })).sort((a, b) => a.hour - b.hour);
+
+      const x10 = d3.scaleBand().domain(tripArrayEnd.map(d => d.hour)).range([margin.left, width - margin.right]).padding(0.1);
+      const y10 = d3.scaleLinear().domain([0, d3.max(tripArrayEnd, d => d.count)]).nice().range([height - margin.bottom, margin.top]);
+
+      const svgChart10 = d3.select("#chart10").append("svg").attr("width", width).attr("height", height);
+      svgChart10.append("g")
+        .selectAll("rect")
+        .data(tripArrayEnd)
+        .enter().append("rect")
+        .attr("x", d => x10(d.hour))
+        .attr("y", d => y10(d.count))
+        .attr("height", d => y10(0) - y10(d.count))
+        .attr("width", x10.bandwidth())
+        .attr("fill", "steelblue")
+        .on("mouseover", (event, d) => {
+          showTooltip(event, `Hour: ${d.hour}:00<br>Trips: ${d.count}`);
+        })
+        .on("mouseout", hideTooltip);
+
+      svgChart10.append("g")
+        .attr("transform", `translate(0,${height - margin.bottom})`)
+        .call(d3.axisBottom(x10).tickFormat(d => d + ":00"))
+        .selectAll("text")
+        .attr("transform", "rotate(-45)")
+        .style("text-anchor", "end");
+
+      svgChart10.append("g")
+        .attr("transform", `translate(${margin.left},0)`)
+        .call(d3.axisLeft(y10));
+
+    }).catch(error => {
+      console.error("Error loading CSV data:", error);
+    });
+
   </script>
 </body>
 
