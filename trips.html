@@ -28,6 +28,23 @@
       padding-top: 10px
     }
 
+    .chart-under-text {
+      text-align: left;
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-top: 12px;
+      padding-bottom: 20px;
+      max-width: 1200px;
+      width: 100%;
+      margin: 0;
+    }
+
+    .chart-under-text p {
+      margin: 0;
+      font-size: 1rem;
+      color: #333;
+    }
+
     .chart-text h2 {
       margin-top: 0;
       font-size: 1.4rem;
@@ -60,6 +77,40 @@
       margin: 60px auto;
       width: 90%;
       max-width: 1200px;
+    }
+
+    .chart-section-mult {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      margin: 10px auto;
+      width: 90%;
+      max-width: 1200px;
+    }
+
+    .chart-top-text {
+      text-align: left;
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-top: 20px;
+      padding-bottom: 12px;
+      max-width: 1200px;
+      width: 100%;
+      margin: 0;
+    }
+
+    .chart-top-text h2 {
+      margin: 0;
+      font-size: 1.4rem;
+      color: #005f73;
+    }
+
+    .chart-top-text p {
+      margin: 8px 0 0 0;
+      font-size: 1rem;
+      color: #333;
     }
 
     body {
@@ -197,28 +248,23 @@
 
   <!-- Chart Containers -->
   <!-- Chart 1 -->
-  <div class="chart-section">
-    <div id="chart1" class="chart-container"></div>
-    <div class="chart-text">
-      <h2>Trips by Hour</h2>
-      <p>Description</p>
+  <div class="chart-section-mult">
+    <div class="chart-top-text">
+      <h2>Trips by Start Time (Old vs New Dataset)</h2>
     </div>
-  </div>
-
-  <!-- Chart 9 -->
-  <div class="chart-section">
-    <div id="chart9" class="chart-container" style="height: 500px; width: 100%;"></div>
-    <div class="chart-text">
-      <h2>Trips by Start Time (New Dataset)</h2>
+    <div id="chart1" class="chart-container"></div>
+    <div class="chart-under-text">
       <p>Description</p>
     </div>
   </div>
 
   <!-- Chart 10 -->
-  <div class="chart-section">
-    <div id="chart10" class="chart-container" style="height: 500px; width: 100%;"></div>
-    <div class="chart-text">
-      <h2>Trips by End Time (New Dataset)</h2>
+  <div class="chart-section-mult">
+    <div class="chart-top-text">
+      <h2>Trips by End Time (Old vs New Dataset)</h2>
+    </div>
+    <div id="chart10" class="chart-container"></div>
+    <div class="chart-under-text">
       <p>Description</p>
     </div>
   </div>
@@ -304,6 +350,7 @@
       data.forEach(d => {
         d.duration = +d.duration;
         d.trip_start_time = new Date(d.trip_start_time);
+        d.trip_end_time = new Date(d.trip_end_time);
       });
 
       // Chart 1: Trips by Hour
@@ -721,6 +768,44 @@
       // If the user change the map (zoom or drag), I update circle position:
       map2.on("moveend", update2)
 
+      // Chart 11: Trips by End Time
+      const tripsByHourEndTime = d3.rollup(data, v => v.length, d => d.trip_end_time.getHours());
+      const tripArrayEndTime = Array.from(tripsByHourEndTime, ([hour, count]) => ({ hour, count })).sort((a, b) => a.hour - b.hour);
+
+      const xEndTime = d3.scaleBand().domain(tripArrayEndTime.map(d => d.hour)).range([margin.left, width - margin.right]).padding(0.1);
+      const yEndTime = d3.scaleLinear().domain([0, d3.max(tripArrayEndTime, d => d.count)]).nice().range([height - margin.bottom, margin.top]);
+
+      const svgChart11 = d3.select("#chart10").append("svg").attr("width", width).attr("height", height);
+      svgChart11.append("g")
+        .selectAll("rect")
+        .data(tripArrayEndTime)
+        .enter().append("rect")
+        .attr("x", d => xEndTime(d.hour))
+        .attr("y", d => yEndTime(d.count))
+        .attr("height", d => yEndTime(0) - yEndTime(d.count))
+        .attr("width", xEndTime.bandwidth())
+        .attr("fill", "steelblue")
+        .on("mouseover", (event, d) => {
+          showTooltip(event, `Hour: ${d.hour}:00<br>Trips: ${d.count}`);
+        })
+        .on("mouseout", hideTooltip);
+
+      // Tilt x-axis for readability
+      const xAxisEnd = svgChart11.append("g")
+        .attr("transform", `translate(0,${height - margin.bottom})`)
+        .call(d3.axisBottom(xEndTime).tickFormat(d => d + ":00"));
+
+      xAxisEnd.selectAll("text")
+        .attr("transform", "rotate(-45)")
+        .style("text-anchor", "end")
+        .attr("dx", "-0.5em")
+        .attr("dy", "0.5em");
+
+      // y-axis
+      svgChart11.append("g")
+        .attr("transform", `translate(${margin.left},0)`)
+        .call(d3.axisLeft(yEndTime));
+
 
       // Convert the trip_start_time string to a Date object and create a 'month' property
       data.forEach(d => {
@@ -876,7 +961,7 @@
       data.forEach(d => {
         d.duration = +d.duration;
         d.trip_start_time = new Date(d.trip_start_time);
-        d.trip_end_time = new Date(d.trip_end_time); // <-- added
+        d.trip_end_time = new Date(d.trip_end_time); 
       });
 
       // Shared chart dimensions
@@ -889,7 +974,7 @@
       const x9 = d3.scaleBand().domain(tripArray.map(d => d.hour)).range([margin.left, width - margin.right]).padding(0.1);
       const y9 = d3.scaleLinear().domain([0, d3.max(tripArray, d => d.count)]).nice().range([height - margin.bottom, margin.top]);
 
-      const svgChart9 = d3.select("#chart9").append("svg").attr("width", width).attr("height", height);
+      const svgChart9 = d3.select("#chart1").append("svg").attr("width", width).attr("height", height);
       svgChart9.append("g")
         .selectAll("rect")
         .data(tripArray)
