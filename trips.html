@@ -209,6 +209,10 @@
       opacity: 1;
       text-decoration: underline;
     }
+
+    .section-title {
+      padding-left: 40px;
+    }
   </style>
 </head>
 
@@ -232,8 +236,6 @@
     </nav>
   </header>
 
-  <h1>TRIP ANALYTICS</h1>
-
   <!--Dropdown Selector
   <label for="chart-select"><strong>Select a chart to view:</strong></label>
   <select id="chart-select">
@@ -246,6 +248,7 @@
   </select>
   -->
 
+  <h1 class="section-title">TRIP ANALYTICS</h1>
   <!-- Chart Containers -->
   <!-- Chart 1 -->
   <div class="chart-section-mult">
@@ -264,11 +267,16 @@
     </div>
     <div id="chart10" class="chart-container"></div>
     <div class="chart-under-text">
-      <p>Both the graphs from last year and this year's data show a roughly normal distribution, with most trip start and end times occuring around
-        early afternoon to the evening (13:00 - 17:00). This shows that most bike rides happen during typical school hours, and are likely used as a
-        means to get to classes more quickly as an alternative to walking or taking the bus. There doesn't seem to be a significant change in the data's
-        distribution compared to last year, but from the y-axis we can see that there has been a large increase in the number of rides occuring this year,
-        from around 7000 rides to 11,000 - 12,000 rides. There's nearly double the amount of rides this year, which suggests that Ithaca Bikeshare is
+      <p>Both the graphs from last year and this year's data show a roughly normal distribution, with most trip start
+        and end times occuring around
+        early afternoon to the evening (13:00 - 17:00). This shows that most bike rides happen during typical school
+        hours, and are likely used as a
+        means to get to classes more quickly as an alternative to walking or taking the bus. There doesn't seem to be a
+        significant change in the data's
+        distribution compared to last year, but from the y-axis we can see that there has been a large increase in the
+        number of rides occuring this year,
+        from around 7000 rides to 11,000 - 12,000 rides. There's nearly double the amount of rides this year, which
+        suggests that Ithaca Bikeshare is
         becoming a popular choice for transportation in the Cornell and Ithaca community.
       </p>
     </div>
@@ -279,8 +287,10 @@
     <div id="chart2" class="chart-container"></div>
     <div class="chart-text">
       <h2>Trip Duration Histogram</h2>
-      <p>Most bike rides are fairly short, ranging from 4-8 minutes per ride. This shows that users are mostly riding bikes to go to places that are
-        closeby, and are using the bikes as an alternative to walking, public transport, or driving. Because trips are short, it may be more effective
+      <p>Most bike rides are fairly short, ranging from 4-8 minutes per ride. This shows that users are mostly riding
+        bikes to go to places that are
+        closeby, and are using the bikes as an alternative to walking, public transport, or driving. Because trips are
+        short, it may be more effective
         to place bike racks more densely within the target region rather than spreading them across a large area.</p>
     </div>
   </div>
@@ -290,10 +300,14 @@
     <div id="chart12" class="chart-container"></div>
     <div class="chart-text">
       <h2>Trip Start Zone Distribution</h2>
-      <p>Over half of bike rides (57.8%) have a starting point at Cornell University, demonstrating that most users are students who benefit from accessing
-        bikes that are on-campus. This reflects a pressing need for an increase of Ithaca Bikeshare racks around areas of the university that students
-        frequently commute from. With Collegetown being so close to campus and over 13% of bike rides initially beginning there, bringing additional bike
-        racks there would also be highly useful for students who need to travel back to campus or their residences. Additionally, it is worth noting that
+      <p>Over half of bike rides (57.8%) have a starting point at Cornell University, demonstrating that most users are
+        students who benefit from accessing
+        bikes that are on-campus. This reflects a pressing need for an increase of Ithaca Bikeshare racks around areas
+        of the university that students
+        frequently commute from. With Collegetown being so close to campus and over 13% of bike rides initially
+        beginning there, bringing additional bike
+        racks there would also be highly useful for students who need to travel back to campus or their residences.
+        Additionally, it is worth noting that
         the distribution of start and end points for Ithaca Bikeshare trips are extremely similar.</p>
     </div>
   </div>
@@ -303,11 +317,16 @@
     <div id="chart13" class="chart-container"></div>
     <div class="chart-text">
       <h2>Trip End Zone Distribution</h2>
-      <p>Again, more than half of bike rides (55.8%) have a starting point at Cornell University, illustrating that many users of Ithaca Bikeshare are
-        students who are commuting to their classes, dorms, dining halls, or other houses on campus. Therefore, it would be efficient to increase the
-        number of bike racks around these hot spots to make sustainable bike trips more convenient. Similarly, because many students travel to
-        Collegetown for food, groceries, and more, as demonstrated by Collegetown constituting over 11% of trip endpoints, adding bike racks to this nearby
-        spot would be helpful as well. Once more, it is worth noting that the distribution of start and end points for Ithaca Bikeshare trips are
+      <p>Again, more than half of bike rides (55.8%) have a starting point at Cornell University, illustrating that many
+        users of Ithaca Bikeshare are
+        students who are commuting to their classes, dorms, dining halls, or other houses on campus. Therefore, it would
+        be efficient to increase the
+        number of bike racks around these hot spots to make sustainable bike trips more convenient. Similarly, because
+        many students travel to
+        Collegetown for food, groceries, and more, as demonstrated by Collegetown constituting over 11% of trip
+        endpoints, adding bike racks to this nearby
+        spot would be helpful as well. Once more, it is worth noting that the distribution of start and end points for
+        Ithaca Bikeshare trips are
         extremely similar.</p>
     </div>
   </div>
@@ -317,8 +336,9 @@
     <div id="chart3" class="chart-container"></div>
     <div class="chart-text">
       <h2>Trip Start and End Distribution</h2>
-      <p>A majority of the trips recorded started and ended on Cornell's campus. This suggests a need for bike racks on Cornell's campus,
-        so riders can take and return bikes conveniently.  </p>
+      <p>A majority of the trips recorded started and ended on Cornell's campus. This suggests a need for bike racks on
+        Cornell's campus,
+        so riders can take and return bikes conveniently. </p>
     </div>
   </div>
 
@@ -327,10 +347,13 @@
     <div id="chart6" class="chart-container"></div>
     <div class="chart-text">
       <h2>Most Common Routes</h2>
-      <p>The most common route for trips by Ithaca Bikeshare trips was from and to Cornell University, showing that most users
-        are Cornell students using bikes to commute between classes. The second most common route for trips was from Cornell
-      University to City of Ithaca, followed by Cornell University to Town of Ithaca, suggesting that many users use it to
-    travel from campus.</p>
+      <p>The most common route for trips by Ithaca Bikeshare trips was from and to Cornell University, showing that most
+        users
+        are Cornell students using bikes to commute between classes. The second most common route for trips was from
+        Cornell
+        University to City of Ithaca, followed by Cornell University to Town of Ithaca, suggesting that many users use
+        it to
+        travel from campus.</p>
     </div>
   </div>
 
@@ -339,8 +362,10 @@
     <div id="chart7" class="chart-container" style="height: 500px; width: 100%;"></div>
     <div class="chart-text">
       <h2>Heat Map for Start Zone</h2>
-      <p>This heat map shows that most users start their Ithaca Bikeshare trips from the Cornell campus, also suggesting that
-        many users are students commuting from their dorms or classes. It also shows that many users start their trips from
+      <p>This heat map shows that most users start their Ithaca Bikeshare trips from the Cornell campus, also suggesting
+        that
+        many users are students commuting from their dorms or classes. It also shows that many users start their trips
+        from
         areas near Cascadilla Street and North Albany Street.</p>
     </div>
   </div>
@@ -350,7 +375,8 @@
     <div id="chart8" class="chart-container" style="height: 500px; width: 100%;"></div>
     <div class="chart-text">
       <h2>Heat Map for End Zone</h2>
-      <p>This heat map shows that most users end their Ithaca Bikeshare trips on the Cornell campus, also suggesting that
+      <p>This heat map shows that most users end their Ithaca Bikeshare trips on the Cornell campus, also suggesting
+        that
         many users are students commuting to their dorms or classes. It also shows that many users end their trips in
         areas near Cascadilla Street and North Albany Street.</p>
     </div>
@@ -523,7 +549,7 @@
         .attr("width", 500)
         .attr("height", 500)
         .append("g")
-          .attr("transform", "translate(250,250)");
+        .attr("transform", "translate(250,250)");
       const color12 = d3.scaleOrdinal().domain(Object.keys(categories12))
         .range(["#d62728", "#ff7f0e", "#2ca02c", "#fcba03", "#1f77b4", "#7820e3"]);
       const pie12 = d3.pie().value(d => d.value);
@@ -573,7 +599,7 @@
         .attr("width", 500)
         .attr("height", 500)
         .append("g")
-          .attr("transform", "translate(250,250)");
+        .attr("transform", "translate(250,250)");
       const color13 = d3.scaleOrdinal().domain(Object.keys(categories13))
         .range(["#d62728", "#ff7f0e", "#2ca02c", "#fcba03", "#1f77b4", "#7820e3"]);
       const pie13 = d3.pie().value(d => d.value);

@@ -27,12 +27,12 @@
       max-width: 450px;
       padding-top: 10px
     }
-    
+
     .chart-text h2 {
       margin-top: 0;
       font-size: 1.4rem;
       color: #005f73;
-      
+
     }
 
     .chart-text p {
@@ -69,116 +69,123 @@
       background: var(--bg);
       line-height: 1.5;
       text-align: center;
-      background-color: #e3f4f8;;
+      background-color: #e3f4f8;
+      ;
       letter-spacing: .8px;
     }
 
     select {
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
     }
-    
+
     /* Header */
-  header {
-    background: #fff;
-    margin-top: 12px;
-    border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, .08);
-    overflow: hidden;
-  }
+    header {
+      background: #fff;
+      margin-top: 12px;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, .08);
+      overflow: hidden;
+    }
 
-  .brand-row {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-    padding: 20px 28px;
-    border-bottom: 1px solid #eef1f4;
-  }
+    .brand-row {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      padding: 20px 28px;
+      border-bottom: 1px solid #eef1f4;
+    }
 
 
-  .logo-mark {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    min-width: 220px;
-  }
+    .logo-mark {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 220px;
+    }
 
-  .logo-mark img {
-    max-height: 80px; /* Reduce logo size */
-    width: auto;
-  }
+    .logo-mark img {
+      max-height: 80px;
+      /* Reduce logo size */
+      width: auto;
+    }
 
-  .logo-text {
-    font-size: 14px;
-    color: #6b7485; /* muted color */
-  }
+    .logo-text {
+      font-size: 14px;
+      color: #6b7485;
+      /* muted color */
+    }
 
-  .logo-text strong {
-    display: block;
-    font-size: 18px;
-    letter-spacing: .5px;
-    color: #2e2e2e;
-  }
+    .logo-text strong {
+      display: block;
+      font-size: 18px;
+      letter-spacing: .5px;
+      color: #2e2e2e;
+    }
 
-  .dashboard-title {
-    font-size: 28px;
-  }
+    .dashboard-title {
+      font-size: 28px;
+    }
 
-  h1 {
-    margin: 0;
-    font-size: 34px;
-    letter-spacing: .8px;
-    text-align: left;
-    padding-top: 30px;
-    padding-left: 140px;
-  }
+    h1 {
+      margin: 0;
+      font-size: 34px;
+      letter-spacing: .8px;
+      text-align: left;
+      padding-top: 30px;
+      padding-left: 140px;
+    }
 
-  /* Navigation */
-  nav {
-    background: #2c4858; /* deep teal */
-    color: #fff;
-    display: flex;
-    gap: 28px;
-    padding: 14px 28px;
-    font-weight: 700;
-    letter-spacing: .3px;
-    flex-wrap: wrap;
-  }
+    /* Navigation */
+    nav {
+      background: #2c4858;
+      /* deep teal */
+      color: #fff;
+      display: flex;
+      gap: 28px;
+      padding: 14px 28px;
+      font-weight: 700;
+      letter-spacing: .3px;
+      flex-wrap: wrap;
+    }
 
-  nav a {
-    color: #fff;
-    text-decoration: none;
-    opacity: .95;
-  }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      opacity: .95;
+    }
 
-  nav a:hover {
-    opacity: 1;
-    text-decoration: underline;
-  }
+    nav a:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
 
+    .section-title {
+      padding-left: 40px;
+    }
   </style>
 </head>
 
 <body>
   <header>
-  <div class="brand-row">
-    <div class="logo-mark">
-      <img src="images/logo.png" alt="Docked Ithaca Bikeshare e-bikes logo" />
-      <div class="logo-text">
-        <strong>ITHACA BIKESHARE</strong>
-        <span>In collaboration with<br />Engineers for a Sustainable World</span>
+    <div class="brand-row">
+      <div class="logo-mark">
+        <img src="images/logo.png" alt="Docked Ithaca Bikeshare e-bikes logo" />
+        <div class="logo-text">
+          <strong>ITHACA BIKESHARE</strong>
+          <span>In collaboration with<br />Engineers for a Sustainable World</span>
+        </div>
       </div>
+      <h1 class="dashboard-title">Micromobility Insights Dashboard</h1>
     </div>
-    <h1 class="dashboard-title">Micromobility Insights Dashboard</h1>
-  </div>
 
-  <nav>
-    <a href="index.html">About</a>
-    <a href="trips.html">Trips</a>
-    <a href="users.html">Users</a>
-  </nav>
-</header>
+    <nav>
+      <a href="index.html">About</a>
+      <a href="trips.html">Trips</a>
+      <a href="users.html">Users</a>
+    </nav>
+  </header>
 
-  <h1>USER DEMOGRAPHICS</h1>
+  <h1 class="section-title">USER DEMOGRAPHICS</h1>
 
   <!--Dropdown Selector 
   <label for="chart-select"><strong>Select a chart to view:</strong></label>
@@ -194,26 +201,29 @@
 
   <!-- Chart Containers -->
 
-<!-- Chart 4 -->
-<div class="chart-section">
-  <div id="chart4" class="chart-container"></div>
-  <div class="chart-text">
-    <h2>Cornell Users: Trips by Hour</h2>
-    <p>The usage of Ithaca Bikeshare for Cornell users shows a clear pattern. The activity is low at night, starts to rise in the morning around 8 AM and peaks in the 
-      afternoon, around 2 PM. After 5 PM, it starts to decline. This shows that most Cornell students use Ithaca Bikeshare for midday travel, likely to commute to classes. 
-</p>
+  <!-- Chart 4 -->
+  <div class="chart-section">
+    <div id="chart4" class="chart-container"></div>
+    <div class="chart-text">
+      <h2>Cornell Users: Trips by Hour</h2>
+      <p>The usage of Ithaca Bikeshare for Cornell users shows a clear pattern. The activity is low at night, starts to
+        rise in the morning around 8 AM and peaks in the
+        afternoon, around 2 PM. After 5 PM, it starts to decline. This shows that most Cornell students use Ithaca
+        Bikeshare for midday travel, likely to commute to classes.
+      </p>
+    </div>
   </div>
-</div>
 
-<!-- Chart 5 -->
-<div class="chart-section">
-  <div id="chart5" class="chart-container"></div>
-  <div class="chart-text">
-    <h2>Cornell vs. Other Email Affiliation</h2>
-    <p>Over 60% of all Ithaca Bikeshare users use Cornell affiliated emails. Considering Cornell users who do not use 
-      Cornell emails for Ithaca Bikeshare, we can tell that Cornell users are take up a significant portion of all Ithacka Bikeshare users. </p>
+  <!-- Chart 5 -->
+  <div class="chart-section">
+    <div id="chart5" class="chart-container"></div>
+    <div class="chart-text">
+      <h2>Cornell vs. Other Email Affiliation</h2>
+      <p>Over 60% of all Ithaca Bikeshare users use Cornell affiliated emails. Considering Cornell users who do not use
+        Cornell emails for Ithaca Bikeshare, we can tell that Cornell users are take up a significant portion of all
+        Ithacka Bikeshare users. </p>
+    </div>
   </div>
-</div>
 
 
 
@@ -293,7 +303,7 @@
         .style("font-size", "10px")
         .attr("dy", "1.0em")
         .attr("dx", "-2.0em");
-;
+      ;
       svgChart4.append("g").call(d3.axisLeft(yCornell));
 
       // Chart 5: Cornell vs Other Email Affiliation
@@ -320,7 +330,7 @@
         .on("mouseout", hideTooltip);
       pieSvgEmail.selectAll("text").data(pieEmail(pieDataEmail)).enter().append("text")
         .attr("transform", d => `translate(${arcEmail.centroid(d)})`).attr("text-anchor", "middle").attr("fill", "#fff").text(d => d.data.key).attr("font-size", "12.25px");
-;
+      ;
 
       const parseTime = d3.timeParse("%Y-%m-%d %H:%M:%S");
 
@@ -342,7 +352,7 @@
 
       data.forEach(d => {
         const start = d.start_zone;
-        if (start === "Cornell University" ) bubblePointsData["Cornell University"]++;
+        if (start === "Cornell University") bubblePointsData["Cornell University"]++;
         else if (start === "City Of Ithaca") bubblePointsData["City Of Ithaca"]++;
         else if (start === "CollegeTown") bubblePointsData["CollegeTown"]++;
         else if (start === "Town of Ithaca") bubblePointsData["Town of Ithaca"]++;
@@ -355,20 +365,20 @@
 
       // Demo markers
       const markers = [
-        { long: -76.4753, lat: 42.4543, size: bubblePointsData["Cornell University"]}, //Cornell University
-        { long: -76.5019, lat: 42.4430, size: bubblePointsData["City Of Ithaca"]}, //City Of Ithaca
-        { long: -76.5035, lat: 42.4444, size: bubblePointsData["CollegeTown"]}, //CollegeTown
-        { long: -76.5030, lat: 42.4405, size: bubblePointsData["Town of Ithaca"]}, //Town of Ithaca
-        { long: -76.4920, lat: 42.4500, size: bubblePointsData["East Hill"]}, //East Hill
-        { long: -76.4950, lat: 42.4265, size: bubblePointsData["Ithaca College"]}, //Ithaca College
-        { long: -76.5150, lat: 42.4300, size: bubblePointsData["South Hill"]}, //South Hill
-        { long: -76.5350, lat: 42.4500, size: bubblePointsData["West Hill"]}, //West Hill
-        {long: -76.45900, lat: 42.4910, size: bubblePointsData["ITH - Airport"]} //ITH - Airport
+        { long: -76.4753, lat: 42.4543, size: bubblePointsData["Cornell University"] }, //Cornell University
+        { long: -76.5019, lat: 42.4430, size: bubblePointsData["City Of Ithaca"] }, //City Of Ithaca
+        { long: -76.5035, lat: 42.4444, size: bubblePointsData["CollegeTown"] }, //CollegeTown
+        { long: -76.5030, lat: 42.4405, size: bubblePointsData["Town of Ithaca"] }, //Town of Ithaca
+        { long: -76.4920, lat: 42.4500, size: bubblePointsData["East Hill"] }, //East Hill
+        { long: -76.4950, lat: 42.4265, size: bubblePointsData["Ithaca College"] }, //Ithaca College
+        { long: -76.5150, lat: 42.4300, size: bubblePointsData["South Hill"] }, //South Hill
+        { long: -76.5350, lat: 42.4500, size: bubblePointsData["West Hill"] }, //West Hill
+        { long: -76.45900, lat: 42.4910, size: bubblePointsData["ITH - Airport"] } //ITH - Airport
       ];
 
       // Add a tile to the map = a background. Comes from OpenStreetmap
       L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       }).addTo(map);
 
 
@@ -456,8 +466,8 @@
       const margin5 = { top: 40, right: 150, bottom: 50, left: 60 },
         width5 = 800 - margin5.left - margin5.right,
         height5 = 400 - margin5.top - margin5.bottom;
-      
-        
+
+
 
       // Append the SVG for the chart
       const svg5 = d3.select("#chart").append("svg")
